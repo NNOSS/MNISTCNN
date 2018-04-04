@@ -92,19 +92,19 @@ def cnn_model_fn(features, labels, mode):
                 loss=loss,
                 train_op=train_op)
 
-        # Evaluation metrics (for EVAL mode)
+    # Evaluation metrics (for EVAL mode)
     eval_metric_ops = {
             "accuracy": tf.metrics.accuracy(
                 labels=labels,
                 predictions=predictions["classes"])}
-            return tf.estimator.EstimatorSpec(
-                    mode=mode,
-                    loss=loss,
-                    eval_metric_ops=eval_metric_ops)
+    return tf.estimator.EstimatorSpec(
+            mode=mode,
+            loss=loss,
+            eval_metric_ops=eval_metric_ops)
 
 
-            def main(unused_argv):
-                # load training and eval data
+def main(unused_argv):
+    # load training and eval data
     mnist = tf.contrib.learn.datasets.load_dataset("mnist")
     train_data = mnist.train.images  # returns np.array
     train_labels = np.asarray(mnist.train.labels, dtype=np.int32)

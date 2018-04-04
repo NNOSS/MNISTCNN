@@ -1,17 +1,16 @@
 # MNISTCNN
-This is an experimental repo using CNN based architecture on the mnist dataset.
+This is an hello world repo of CNN on the mnist dataset using Tensorflow and Keras.
 
 # SETUP
 
 ```
-$ sudo apt-get install python3-pip python3-dev python-virtualenv
+$ sudo apt-get install python3-pip python3-dev python-virtualenv (linux)
 $ virtualenv venv
 $ source ~/tensorflow/bin/activate 
 $ (venv) pip install -r requirements.txt
 
 ```
 # MODEL
-1. Tensorflow
 * Convolutional Layer #1: Applies 32 5x5 filters (extracting 5x5-pixel subregions), with ReLU activation function
 * Pooling Layer #1: Performs max pooling with a 2x2 filter and stride of 2 (which specifies that pooled regions do not overlap)
 * Convolutional Layer #2: Applies 64 5x5 filters, with ReLU activation function
