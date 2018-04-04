@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Dataset
+MNIST-data/
+
 # C extensions
 *.so
 
