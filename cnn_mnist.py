@@ -139,7 +139,7 @@ def main(unused_argv):
             x={"x": eval_data},
             y=eval_labels,
             num_epochs=1,
-            sutffle=False)
+            shuffle=False)
     eval_results = mnist_classifier.evaluate(input_fn=eval_input_fn)
     print(eval_results)
 
